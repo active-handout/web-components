@@ -12,11 +12,17 @@
   "author": "Igor Montagner",
   "license": "ISC",
   "devDependencies": {
+    "@preact/preset-vite": "^2.5.0",
     "sass": "^1.65.1",
-    "vite": "^4.4.9"
+    "vite": "^4.4.9",
+    "typescript": "^5.0.2"
+
   },
   "dependencies": {
+    "htm": "^3.1.1",
     "lit": "^2.8.0",
-    "mermaid": "^10.3.1"
+    "mermaid": "^10.3.1",
+    "preact": "^10.0.0",
+    "preact-custom-element": "^4.2.1"
   }
 }
