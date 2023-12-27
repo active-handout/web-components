@@ -1,6 +1,6 @@
 import {LitElement, html, unsafeCSS} from 'lit';
 import style from './ah-button.scss?inline';
-// const style = "";
+
 export class AhButton extends LitElement {
   static properties = {
     href: {type: String},
