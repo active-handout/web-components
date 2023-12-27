@@ -8,7 +8,8 @@
     "build": "vite build --mode production && sass src/themes/ dist/",
     "test": "vite test",
     "dev": "vite",
-    "ssr": "vite build --mode ssr-bundle && node ssr.js"
+    "ssr-bundle": "vite build --mode ssr-bundle",
+    "ssr": "node ssr.js"
   },
   "author": "Igor Montagner",
   "license": "ISC",
