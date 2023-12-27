@@ -7,7 +7,8 @@ import {readFile, writeFile} from 'fs/promises' ;
 
 import './dist/ah-components-ssr.js';
 
-const templateText = await readFile('index.html', { encoding: 'utf8' });
+const fileName = process.argv[2];
+const templateText = await readFile(fileName, { encoding: 'utf8' });
 const templateHTML = unsafeHTML(templateText);
 const result = render(html`${templateHTML}
 `);
