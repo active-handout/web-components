@@ -1,11 +1,18 @@
-import {LitElement, html, css} from 'lit';
+<!--lit-part r7UCAAUVAAA=--><!--lit-part uaBfUE+1kj0=--><script type="module" src="./dist/ah-components.js"></script>
 
-export class AhTerminal extends LitElement {
-  static properties = {
-    text: String,
-  };
+<ah-button  href="http://www.google.com"><template shadowroot="open" shadowrootmode="open"><style>:host{display:block;--btn-background-color: transparent;--btn-background-hover-color: transparent;--btn-border-color: var(--clr-btn);--btn-border-hover-color: var(--clr-btn-hover);--btn-text-color: var(--clr-btn-text);--btn-text-hover-color: var(--clr-btn-text-hover)}a.ah-button{margin-left:auto;margin-right:auto;max-width:15em;display:block;text-align:center;text-decoration:none;font-weight:400;padding:.2em .6em;border:1px solid var(--btn-border-color);background:var(--btn-background-color);color:var(--btn-text-color)}a.ah-button:not(:disabled):hover,a.ah-button:not(:disabled):active,a.ah-button:not(:disabled):focus{--btn-background-color: var(--btn-background-hover-color);--btn-border-color: var(--btn-border-hover-color);--btn-text-color: var(--btn-text-hover-color);cursor:pointer}a.ah-button:not(:disabled):active{transform:scale(.99)}a.ah-button:disabled{--clr-btn: var(--clr-btn-disabled);--clr-btn-text: var(--clr-btn-text-disabled);cursor:default}a.ah-button--primary{--btn-background-color: var(--clr-btn);--btn-background-hover-color: var(--clr-btn-hover);--btn-text-color: var(--clr-btn-text-primary);--btn-text-hover-color: var(--clr-btn-text-primary-hover);border:none}a.ah-button--borderless{border:none}.ah-btn-group{display:flex;gap:.5em}.ah-btn-group--right{justify-content:flex-end}
+</style><!--lit-part 6+36WkGAUw4=-->
+      <div>
+        <!--lit-node 1--><a href="http://www.google.com" class="ah-button "><slot></slot></a>
+      </div>
+    <!--/lit-part--></template>sfsdf</ah-button>
 
-  static styles = css`
+<ah-diagram>
+	graph LR
+		A --- B
+</ah-diagram>
+
+<ah-terminal><template shadowroot="open" shadowrootmode="open"><style>
     /**
     * termynal.js
     *
@@ -119,47 +126,23 @@ export class AhTerminal extends LitElement {
     slot {
       display: none;
     }
-  `;
-
-  constructor() {
-    super();
-    this.text = "";
-  }
-
-  updateComponentText() {
-
-  }
-
-  render() {
-    let l = [];
-    this.text.split("\n").forEach((line) => {
-      if (line.trim() === "") {
-      } else if (line.startsWith("$")) {
-        const txt = line.replace("$", "").trimEnd();
-        l.push(html`<span data-ty="input">${txt}</span>`);
-      } else {
-        l.push(html`<span data-ty>${line}</span>`)
-      }
-    });
-
-    return html`
+  </style><!--lit-part +9p5oJ/jDv8=-->
       <slot></slot>
       <div id="termy" data-termynal>
-        ${l}
+        <!--lit-part--><!--/lit-part-->
       </div>
-    `;
-  }
+    <!--/lit-part--></template>
+$ input commands
+output here
+</ah-terminal>
 
-  firstUpdated() {
-    let l = "";
-    this.shadowRoot.querySelector('slot')?.assignedNodes().forEach(
-      (node) => {
-        l += node.textContent;
-      });
-    if (l != "") {
-      this.text = l;
+<ah-external-content  src="https://www.google.com/index.html"><template shadowroot="open" shadowrootmode="open"><style>
+    :host {
+      display: block;
+      height: 400px;
     }
-  }
-}
-
-customElements.define('ah-terminal', AhTerminal);
+  </style><!--lit-part FntKxR+Pg1U=-->
+        <!--lit-node 0--><iframe src="https://www.google.com/index.html" width="100%" height="100%"></iframe>
+      <!--/lit-part--></template></ah-external-content>
+<!--/lit-part-->
+<!--/lit-part-->
